@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sundareswaran Murugan — Full-Stack Developer & ML Enthusiast</title>
+<meta name="description" content="Portfolio of Sundareswaran Murugan — Full-Stack Developer working across React, Spring Boot and Flask, now moving into Machine Learning and networking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Background layers: grid + glow orbs -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-orb orb-1" aria-hidden="true"></div>
+<div class="bg-orb orb-2" aria-hidden="true"></div>
+
+<!-- ===== NAV ===== -->
+<header class="site-header" id="top">
+  <nav class="nav container">
+    <a href="#top" class="nav-name">Sundareswaran<span class="dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="assets/Sundareswaran_Resume.pdf" download class="btn btn-ghost nav-resume">Resume</a>
+  </nav>
+</header>
+
+<main>
+  <!-- ===== HERO ===== -->
+  <section class="hero container" id="hero">
+    <div class="hero-text reveal">
+      <p class="hero-kicker">Virudhunagar, Tamil Nadu · Open to opportunities, March 2027</p>
+      <h1 class="hero-title">
+        Full-stack developer today.<br>
+        Teaching machines to see, <span class="accent">tomorrow.</span>
+      </h1>
+      <p class="hero-tagline">
+        I build complete web applications with React, Spring Boot and Flask —
+        and I'm currently deep in CNNs, Random Forests, and the networking layer underneath it all.
+      </p>
+      <div class="hero-actions">
+        <a href="assets/Sundareswaran_Resume.pdf" download class="btn btn-primary">
+          <span>Download Résumé</span>
+        </a>
+        <a href="https://wa.me/918682933496" target="_blank" rel="noopener" class="btn btn-outline">
+          <span>Contact Me</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual reveal" aria-hidden="true">
+      <div class="portrait-frame">
+        <img src="assets/images/profile.jpg" alt="Sundareswaran Murugan" class="portrait-img">
+        <div class="portrait-ring"></div>
+      </div>
+      <div class="term-card">
+        <div class="term-bar"><span></span><span></span><span></span></div>
+        <div class="term-body">
+          <p><span class="term-prompt">$</span> whoami</p>
+          <p class="term-line" id="termLine">&nbsp;</p>
+          <p class="term-cursor">&#9646;</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about container" id="about">
+    <div class="section-head reveal">
+      <h2>About</h2>
+    </div>
+    <div class="about-grid">
+      <p class="about-lead reveal">
+        I'm a third-year BCA student at VHNSN College, and my focus right now is Machine Learning and
+        Deep Learning — building real-time solutions to problems I can actually see around me, like crop
+        disease detection for farmers.
+      </p>
+      <div class="about-body reveal">
+        <p>
+          I started with plain HTML and CSS, moved into React for structured frontend work, then rounded
+          that out into full-stack development with Spring Boot and Flask. Somewhere in that process AI
+          became part of how I build — and that pulled me toward ML/DL, which is where most of my energy
+          goes today.
+        </p>
+        <p>
+          Alongside that, I keep a working knowledge of networking and operating systems, use n8n for
+          automating small workflows, and I'm comfortable enough across the stack to take a project from
+          a database schema to a styled, responsive interface.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="skills container" id="skills">
+    <div class="section-head reveal">
+      <h2>Skills</h2>
+    </div>
+    <div class="skills-grid" id="skillsGrid"><!-- populated by script.js --></div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Projects</h2>
+        <p class="section-sub">A running log — new builds get added here as I finish them.</p>
+      </div>
+    </div>
+    <div class="projects-track-wrap reveal">
+      <div class="projects-track" id="projectsTrack"><!-- populated by script.js --></div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section class="achievements container" id="achievements">
+    <div class="section-head reveal">
+      <h2>Achievements</h2>
+    </div>
+    <div class="achievement-card reveal">
+      <div class="achievement-badge">🏆</div>
+      <div>
+        <h3>First Prize — State-Level Hackathon</h3>
+        <p>
+          Awarded first place at the state-level hackathon hosted by the Department of PG Computer Science,
+          Raja's College, Rajapalayam (9 September 2026), for the <strong>Smart Tomato Crop Advisor</strong> —
+          built using a CNN disease-detection model and a Random Forest irrigation-recommendation engine.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact container" id="contact">
+    <div class="section-head reveal">
+      <h2>Get in touch</h2>
+      <p class="section-sub">Have a role, a project, or just want to talk tech? Send a message directly to my inbox.</p>
+    </div>
+    <div class="contact-grid">
+      <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/xrpgvygp" method="POST">
+        <div class="form-row">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" required placeholder="Your name">
+        </div>
+        <div class="form-row">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" required placeholder="you@example.com">
+        </div>
+        <div class="form-row">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="5" required placeholder="What's on your mind?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">
+          <span>Send Message</span>
+        </button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+      <div class="contact-links reveal">
+        <a href="mailto:sundareswaran00007@gmail.com" class="contact-link">
+          <span class="contact-link-label">Email</span>
+          <span class="contact-link-value">sundareswaran00007@gmail.com</span>
+        </a>
+        <a href="https://www.linkedin.com/in/sundareswaran007" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-label">LinkedIn</span>
+          <span class="contact-link-value">in/sundareswaran007</span>
+        </a>
+        <a href="https://github.com/lovelysundar07" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-label">GitHub</span>
+          <span class="contact-link-value">@lovelysundar07</span>
+        </a>
+        <a href="https://wa.me/918682933496" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-label">WhatsApp</span>
+          <span class="contact-link-value">+91 86829 33496</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; 2026 Sundareswaran Murugan. Developed by Sundareswaran.</p>
+    <a href="#top" class="back-to-top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
