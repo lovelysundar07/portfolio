@@ -33,7 +33,7 @@ const projects = [
       "MongoDB Atlas for persistent cloud data storage"
     ],
     demoUrl: "https://packinglist-six.vercel.app/",
-    codeUrl: "https://github.com/lovelysundar07/packinglist.git"
+    codeUrl: "https://github.com/lovelysundar07/packinglist"
   },
   {
     status: "Frontend + Backend",
@@ -47,7 +47,7 @@ const projects = [
       "Admin panel: doctor assignment, duty scheduling, WhatsApp notifications via wa.me"
     ],
     demoUrl: "https://hospitalmanagement2006.netlify.app/",
-    codeUrl: "https://github.com/lovelysundar07/hospital_management_fresh.git"
+    codeUrl: "https://github.com/lovelysundar07/hospital_management_fresh"
   }
 ];
 
