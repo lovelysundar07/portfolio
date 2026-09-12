@@ -271,13 +271,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
   filter: saturate(1.05) contrast(1.03);
+  
 }
 .portrait-frame--circle .portrait-img{
   border-radius: 50%;
   border: 2px solid rgba(139,92,246,0.5);
 }
 .portrait-zoom{
-  object-position: center 18%;
+  object-position: center 85%;
   transform: scale(1.35);
   transform-origin: center 22%;
 }
