@@ -247,13 +247,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .hero-visual{ position: relative; justify-self: center; }
 .portrait-frame{
-  position: relative; width: 260px; height: 320px; margin: 0 auto;
+  position: relative; width: 360px; height: 320px; margin: 0 auto;
 }
 .portrait-frame--circle{
-  width: 280px; height: 280px; border-radius: 50%;
+  width: 380px; height: 380px; border-radius: 50%;
 }
 .portrait-glow{
-  position: absolute; top: 50%; left: 50%;
+  position: absolute; top: 60%; left: 50%;
   width: 380px; height: 380px;
   transform: translate(-50%, -60%);
   background: radial-gradient(circle, rgba(139,92,246,0.55) 0%, rgba(139,92,246,0.25) 40%, transparent 72%);
