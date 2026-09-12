@@ -11,7 +11,7 @@ const projects = [
     title: "Smart Tomato Crop Advisor",
     description:
       "An ML-powered advisory system for farmers: detects tomato leaf disease from a photo and recommends irrigation based on live weather data.",
-    stack: ["Python", "Flask", "CNN", "Random Forest", "NumPy", "Pandas"],
+    stack: ["Python", "Flask", "Machine Learning", "Python Libraries"],
     features: [
       "CNN image-classification model for leaf disease detection, ~91% validation accuracy",
       "Random Forest model generating a daily LOW / MEDIUM / HIGH irrigation recommendation",
@@ -33,7 +33,7 @@ const projects = [
       "MongoDB Atlas for persistent cloud data storage"
     ],
     demoUrl: "https://packinglist-six.vercel.app/",
-    codeUrl: "https://github.com/lovelysundar07"
+    codeUrl: "https://github.com/lovelysundar07/packinglist.git"
   },
   {
     status: "Frontend + Backend",
@@ -47,7 +47,44 @@ const projects = [
       "Admin panel: doctor assignment, duty scheduling, WhatsApp notifications via wa.me"
     ],
     demoUrl: "https://hospitalmanagement2006.netlify.app/",
-    codeUrl: "https://github.com/lovelysundar07"
+    codeUrl: "https://github.com/lovelysundar07/hospital_management_fresh.git"
+  }
+];
+
+/* =========================================================
+   CERTIFICATIONS DATA
+   ---------------------------------------------------------
+   Same pattern as projects — copy an object below to add a
+   new certificate or workshop.
+========================================================= */
+const certifications = [
+  {
+    type: "prize",
+    icon: "🏆",
+    title: "1st Prize — Web Crafters",
+    event: "QMAZE-2K25, State Level Technical Symposium",
+    meta: "Dept. of Computer Applications, Ayya Nadar Janaki Ammal College, Sivakasi · 4 Feb 2025"
+  },
+  {
+    type: "prize",
+    icon: "🏆",
+    title: "1st Prize — Shape Craft",
+    event: "QMAZE-2K26, State Level Technical Symposium",
+    meta: "Dept. of Computer Applications, Ayya Nadar Janaki Ammal College, Sivakasi · 2 Mar 2026"
+  },
+  {
+    type: "workshop",
+    icon: "📜",
+    title: "RPA with UiPath",
+    event: "Workshop — Participation Certificate",
+    meta: "Dept. of Information Technology, VHNSN College, Virudhunagar · 11 Dec 2024"
+  },
+  {
+    type: "workshop",
+    icon: "🤖",
+    title: "Agentic AI and Prompt Engineering",
+    event: "Workshop — Dept. of Information Technology, VHNSN College",
+    meta: "Resource persons: Mr. Manikandan, CEO, W3 Digital Solution, Chennai & Mr. Ranganathan, CEO, Menthee Technologies, Chennai · 4 Jul 2026"
   }
 ];
 
@@ -81,10 +118,11 @@ const skillGroups = [
   {
     label: "ML / DL & Automation",
     items: [
+      { name: "Machine Learning" },
+      { name: "Deep Learning" },
       { name: "CNN" },
       { name: "Random Forest" },
-      { name: "NumPy", icon: DEVICON("numpy") },
-      { name: "Pandas", icon: DEVICON("pandas") },
+      { name: "Python Libraries" },
       { name: "n8n" }
     ]
   },
@@ -172,6 +210,107 @@ function renderProjects() {
       </article>`;
     })
     .join("");
+}
+
+/* =========================================================
+   RENDER: CERTIFICATIONS
+========================================================= */
+function renderCertifications() {
+  const grid = document.getElementById("certGrid");
+  if (!grid) return;
+
+  const groupHtml = (type, label) => {
+    const items = certifications.filter((c) => c.type === type);
+    if (!items.length) return "";
+    return `
+      <div class="cert-group">
+        <h3 class="cert-group-title">${label}</h3>
+        <div class="cert-group-grid">
+          ${items
+            .map(
+              (c) => `
+              <div class="cert-card reveal">
+                <span class="cert-icon">${c.icon}</span>
+                <h4>${c.title}</h4>
+                <span class="cert-event">${c.event}</span>
+                <p class="cert-meta">${c.meta}</p>
+              </div>`
+            )
+            .join("")}
+        </div>
+      </div>`;
+  };
+
+  grid.innerHTML = groupHtml("prize", "Prizes") + groupHtml("workshop", "Workshops Attended");
+}
+
+/* =========================================================
+   BACKGROUND ANIMATION — drifting particle network
+   Subtle nodes-and-links animation echoing the ML / networking
+   theme. Skips entirely if the user prefers reduced motion.
+========================================================= */
+function initBgAnimation() {
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReduced) return;
+
+  const canvas = document.createElement("canvas");
+  canvas.id = "bgCanvas";
+  canvas.setAttribute("aria-hidden", "true");
+  document.body.appendChild(canvas);
+  const ctx = canvas.getContext("2d");
+
+  let width, height, nodes;
+  const LINK_DIST = 150;
+
+  function resize() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+    const count = Math.min(70, Math.floor((width * height) / 22000));
+    nodes = Array.from({ length: count }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.25,
+      vy: (Math.random() - 0.5) * 0.25
+    }));
+  }
+
+  function step() {
+    ctx.clearRect(0, 0, width, height);
+    nodes.forEach((n) => {
+      n.x += n.vx;
+      n.y += n.vy;
+      if (n.x < 0 || n.x > width) n.vx *= -1;
+      if (n.y < 0 || n.y > height) n.vy *= -1;
+    });
+
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const dx = nodes[i].x - nodes[j].x;
+        const dy = nodes[i].y - nodes[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < LINK_DIST) {
+          ctx.strokeStyle = `rgba(139,92,246,${0.14 * (1 - dist / LINK_DIST)})`;
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+    nodes.forEach((n) => {
+      ctx.fillStyle = "rgba(55,230,208,0.55)";
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, 1.6, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    requestAnimationFrame(step);
+  }
+
+  resize();
+  window.addEventListener("resize", resize);
+  step();
 }
 
 /* =========================================================
@@ -301,8 +440,10 @@ function initContactForm() {
 document.addEventListener("DOMContentLoaded", () => {
   renderSkills();
   renderProjects();
+  renderCertifications();
   initNav();
   initTerminal();
   initContactForm();
+  initBgAnimation();
   initReveal();
 });

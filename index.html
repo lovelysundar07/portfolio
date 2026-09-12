@@ -19,34 +19,39 @@
 
 <!-- ===== NAV ===== -->
 <header class="site-header" id="top">
-  <nav class="nav container">
-    <a href="#top" class="nav-name">Sundareswaran<span class="dot">.</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#achievements">Achievements</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="assets/Sundareswaran_Resume.pdf" download class="btn btn-ghost nav-resume">Resume</a>
-  </nav>
+  <div class="container">
+    <nav class="nav nav-glass">
+      <a href="#top" class="nav-name">Sundareswaran Murugan<span class="dot">.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="assets/Sundareswaran_Resume.pdf" download class="btn btn-ghost nav-resume">Resume</a>
+    </nav>
+  </div>
 </header>
 
 <main>
   <!-- ===== HERO ===== -->
   <section class="hero container" id="hero">
     <div class="hero-text reveal">
+      <p class="hero-greeting">Hey, I'm Sundareswaran Murugan <span class="wave">👋</span></p>
       <p class="hero-kicker">Virudhunagar, Tamil Nadu · Open to opportunities, March 2027</p>
       <h1 class="hero-title">
         Full-stack developer today.<br>
-        Teaching machines to see, <span class="accent">tomorrow.</span>
+        Exploring Machine Learning, <span class="accent">tomorrow.</span>
       </h1>
       <p class="hero-tagline">
         I build complete web applications with React, Spring Boot and Flask —
-        and I'm currently deep in CNNs, Random Forests, and the networking layer underneath it all.
+        and right now I'm expanding into the wider world of Machine Learning and Deep Learning,
+        with networking fundamentals running underneath it all.
       </p>
       <div class="hero-actions">
         <a href="assets/Sundareswaran_Resume.pdf" download class="btn btn-primary">
@@ -59,7 +64,7 @@
     </div>
     <div class="hero-visual reveal" aria-hidden="true">
       <div class="portrait-frame">
-        <img src="assets/images/profile.jpg" alt="Sundareswaran Murugan" class="portrait-img">
+        <img src="assets/images/profile.jpg" alt="Sundareswaran Murugan" class="portrait-img portrait-zoom">
         <div class="portrait-ring"></div>
       </div>
       <div class="term-card">
@@ -128,19 +133,35 @@
     </div>
     <div class="achievement-card reveal">
       <div class="achievement-badge">🏆</div>
-      <div>
+      <div class="achievement-body">
         <h3>First Prize — State-Level Hackathon</h3>
         <p>
           Awarded first place at the state-level hackathon hosted by the Department of PG Computer Science,
           Raja's College, Rajapalayam (9 September 2026), for the <strong>Smart Tomato Crop Advisor</strong> —
           built using a CNN disease-detection model and a Random Forest irrigation-recommendation engine.
+          Conducted under the aegis of the <strong>Government of India</strong>, MHRD's Innovation Cell (MIC),
+          and the <strong>Institution's Innovation Council (IIC)</strong>.
         </p>
+        <div class="org-seals">
+          <span class="org-seal">🇮🇳<em>Govt. of India</em></span>
+          <span class="org-seal">MIC<em>MHRD Innovation Cell</em></span>
+          <span class="org-seal">IIC<em>Institution's Innovation Council</em></span>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section class="certifications container" id="certifications">
+    <div class="section-head reveal">
+      <h2>Certifications &amp; Participation</h2>
+      <p class="section-sub">Symposiums and workshops from college-level technical events.</p>
+    </div>
+    <div class="cert-grid" id="certGrid"><!-- populated by script.js --></div>
+  </section>
+
   <!-- ===== CONTACT ===== -->
-  <section class="contact container" id="contact">
+  <section class="contact contact--shifted container" id="contact">
     <div class="section-head reveal">
       <h2>Get in touch</h2>
       <p class="section-sub">Have a role, a project, or just want to talk tech? Send a message directly to my inbox.</p>
@@ -188,7 +209,7 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p>&copy; 2026 Sundareswaran Murugan. Developed by Sundareswaran.</p>
+    <p>&copy; 2026 Sundareswaran Murugan. Developed by Sundareswaran Murugan.</p>
     <a href="#top" class="back-to-top">Back to top ↑</a>
   </div>
 </footer>
