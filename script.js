@@ -18,8 +18,8 @@ const projects = [
       "Live weather integration for rainfall, humidity and temperature",
       "Bilingual (Tamil/English) Gemini-powered chatbot for farmer queries"
     ],
-    demoUrl: "",          // left blank intentionally — not hosted yet
-    codeUrl: "https://github.com/lovelysundar07"
+    demoUrl: "https://smart-agri-advisor-x4lc.onrender.com/",          // left blank intentionally — not hosted yet
+    codeUrl: "https://github.com/lovelysundar07/smart_crop_tomato"
   },
   {
     status: "Full-Stack · Deployed",
